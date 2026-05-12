@@ -1,20 +1,14 @@
 import React from "react";
+import { navLinks } from "../constants/constants";
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <header>
       <nav>
         <img src="/logo.svg" alt="Apple Logo" />
 
         <ul>
-          {[
-            { label: "Store" },
-            { label: "Mac" },
-            { label: "iPhone" },
-            { label: "Watch" },
-            { label: "Vision" },
-            { label: "Airpods" }
-          ].map(({ label }) => (
+          {navLinks.map(({ label }) => (
             <li key={label}>
               <a href={label}>{label}</a>
             </li>
@@ -35,4 +29,5 @@ export const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;
+
